@@ -1,0 +1,36 @@
+server:
+  port: 90
+#  ssl:
+#    key-store-password: sendiZAKARIA
+#    key-store: classpath:keystore.p12
+#    key-store-type: PKCS12
+#    key-alias: tomcat
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: true
+    database: default
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect:
+          storage_engine: innodb
+  datasource:
+    url: jdbc:mysql://localhost:3306/backendbouchon?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=true&useUnicode=yes&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  main:
+   allow-circular-references: true
+#JWT
+app:
+  jwtSecret: "@zeRtY193!"
+  jwtExpirationMs: 86400000
+  version: 1.0.1
