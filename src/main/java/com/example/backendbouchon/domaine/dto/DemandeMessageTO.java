@@ -1,6 +1,7 @@
 package com.example.backendbouchon.domaine.dto;
 
 import com.example.backendbouchon.model.Categorie0;
+import com.example.backendbouchon.model.PieceJointe;
 import com.example.backendbouchon.model.Tag;
 import lombok.Data;
 import lombok.Getter;
@@ -29,7 +30,7 @@ public class DemandeMessageTO {
     private boolean parents;
     private String direction;
     private List<Tag> destinataire;
-
+    private PieceJointe pieceJointe ;
 
     public DemandeMessageTO(int sender, String state, String subject, String category, Categorie0 categoryO,
                             StudentTO student,

@@ -35,7 +35,7 @@ public class DemandeMessage implements Serializable {
     @Column(name = "category")
     private String category;
 
-    @OneToOne(mappedBy = "demandeMessage",cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
+    @OneToOne(mappedBy = "demandeMessage",cascade = CascadeType.MERGE,fetch = FetchType.LAZY, optional = false)
     @JsonIgnore
     private Categorie0 categoryO;
 
@@ -59,5 +59,9 @@ public class DemandeMessage implements Serializable {
     @OneToMany(mappedBy="demandeMessage" )
     @JsonIgnore
     private List<Tag> destinataire;
+
+    @OneToOne(mappedBy = "demandeMessage",cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
+    @JsonIgnore
+    private PieceJointe pieceJointe ;
 
 }

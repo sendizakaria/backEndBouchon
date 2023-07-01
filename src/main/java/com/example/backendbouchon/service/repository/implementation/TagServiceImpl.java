@@ -34,10 +34,6 @@ public class TagServiceImpl implements ITagService {
 
     }
 
-    /*@Override
-    public TagTO getTagById(Long CategorieId) {
-        return  tagMapperImpl.toTagTO(tagRepository.findById(CategorieId).orElse(null));
-    }*/
 
     @Override
     public void deleteAllTags() {

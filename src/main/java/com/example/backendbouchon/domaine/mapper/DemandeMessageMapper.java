@@ -13,6 +13,9 @@ public interface DemandeMessageMapper {
 
         DemandeMessageTO toDemandeMessageTO(DemandeMessage demandeMessage);
 
+
+
+
         DemandeMessage toDemandeMessageBO(DemandeMessageTO demandeMessageTO);
 
         List<DemandeMessageTO> toListDemandeMessageTO(List<DemandeMessage> listeDemandeMessage);
