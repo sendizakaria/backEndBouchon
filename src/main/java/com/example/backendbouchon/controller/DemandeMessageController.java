@@ -62,23 +62,6 @@ public class DemandeMessageController {
     }
 
 
-    @PostMapping(value ="/save-demande-messages" , consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
-    public ResponseEntity<Object> mergeUser(@RequestParam("message") String message,  @RequestPart("attachement") MultipartFile file){
-
-        System.out.println("-----------------"+file.toString());
-
-        //Map<String, List<InputPart>> uploadForm = file.getFormDataMap();
-     //   iDemandeMessageService.createMessage(uploadForm);
-        /*
-      System.out.println("-----------------"+file.toString());
-
-
-*/
-        return new ResponseEntity<>(HttpStatus.CREATED);
-
-
-    }
-
     @PostMapping("/new3")
     public DemandeMessageTO uploadFile(@RequestParam(value = "message", required = false) String jsonObject,
     @RequestParam(value = "attachements", required = false) MultipartFile file) {

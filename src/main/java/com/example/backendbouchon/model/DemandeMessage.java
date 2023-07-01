@@ -39,7 +39,6 @@ public class DemandeMessage implements Serializable {
     @JsonIgnore
     private Categorie0 categoryO;
 
-   // @OneToMany(cascade = {CascadeType.ALL})
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
     @JsonIgnore
     private Student student;

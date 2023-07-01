@@ -25,7 +25,7 @@ public class PieceJointe implements Serializable {
     @Column(name="NAME_FILE",length = 20,nullable = true)
     private String nameFile;
 
-    @Column(name="TYPE_FILE",length = 10,nullable = true)
+    @Column(name="TYPE_FILE",length = 900,nullable = true)
     private String typeFile;
     //image bytes can have large lengths so we specify a value
     //which is more than the default length for picByte column
